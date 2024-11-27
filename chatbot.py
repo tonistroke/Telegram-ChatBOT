@@ -30,7 +30,7 @@ model = neural_network(input_size, hidden_size, output_size).to(device)
 model.load_state_dict(model_state)
 model.eval()
 
-def handle_response(sentence: str) -> str:
+def handle_response(sentence: str):
     sentence = tokenize(sentence)
     X = bag_of_word(sentence, all_words)
     X = X.reshape(1, X.shape[0])
@@ -46,13 +46,15 @@ def handle_response(sentence: str) -> str:
     if prob.item() > 0.75:
         for intent in intents['intents']:
             if tag == intent["tag"]:
-                return random.choice(intent['respuestas'])
+                response = random.choice(intent['respuestas'])
+                return response, tag
     else:
-        return "Lo siento no entiendo..."
+        return "Lo siento no entiendo...", tag
 
 
-#Uso handle_response
-dbg = handle_response("Estoy teniendo un gran día.")
+"""Uso handle_response
+dbg, ttt = handle_response("Estoy teniendo un gran día.")
 print(dbg)
-
+print(ttt)
+"""
 

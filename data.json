@@ -1,7 +1,7 @@
 {
     "intents": [
       {
-        "tag": "greeting",
+        "tag": "saludos",
         "patrones": [
           "Hola",
           "¿Qué tal?",
@@ -35,7 +35,7 @@
           "¿Cómo te sientes hoy?"
         ], 
         "respuestas": [
-          "¡Hola! Nada nuevo por aquí, pero estoy listo para ayudarte.",
+          "¡Hola! Todo bien por aquí, estoy listo para ayudarte.",
           "¡Estoy genial! ¿En qué puedo ayudarte hoy?",
           "Todo bien, gracias por preguntar. ¿Y tú, cómo estás?",
           "¡Al 100%! ¿Qué tal tú?",
@@ -140,12 +140,41 @@
             "¿Qué amenidades ofrecen?"
         ],
         "respuestas": [
+            "Tenemos tres tipos de habitaciones: Tipo 1: Acceso a bar., Tipo 2: Acceso a bar, restaurante con buffet habierto, karaoke y piscina pública. Tipo 3: Todo lo mostrado en Tipo 2, más una habitación enorme con piscina privada tipo 2. Por favor, indícame cuál te interesa para más detalles.",
             "Tenemos tres tipos de habitaciones: Tipo 1: Acceso a bar., Tipo 2: Acceso a bar, restaurante con buffet habierto, karaoke y piscina pública. Tipo 3: Todo lo mostrado en Tipo 2, más una habitación enorme con piscina privada y cancha deportiva más lo mostrado en tipo 2. Por favor, indícame cuál te interesa para más detalles."
         ]
     },
     {
+      "tag": "info-t1",
+      "patrones":[
+        "t1", "tipo uno", "tier 1", "tipo 1", "habitacion 1",
+        "muestrame más informacion de la habitacion tipo 1",
+        "hablame de la tipo 1"
+      ],
+      "respuestas":["Nuestra selección mas economica cuenta con: "]
+    },
+    {
+      "tag": "info-t2",
+      "patrones":[
+        "t2", "tipo dos", "tier 2", "tipo 2", "habitacion 2",
+        "muestrame más informacion de la habitacion tipo 2",
+        "hablame de la tipo 2"
+      ],
+      "respuestas":["Nuestra Habitacion Tipo 2: "]
+    },
+    {
+      "tag": "info-t3",
+      "patrones":[
+        "t3", "tipo tres", "tier 3", "tipo 3", "habitacion 3",
+        "muestrame más informacion de la habitacion tipo 3",
+        "hablame de la tipo 3"
+      ],
+      "respuestas":["Nuestra suite más lujosa cuenta con: "]
+    },
+    {
         "tag": "reservar-estadia",
         "patrones": [
+            "Reserva ya!",
             "Quiero reservar una habitación.",
             "Necesito hacer una reserva.",
             "¿Cómo puedo agendar una estadía?",
@@ -153,11 +182,7 @@
             "Quiero quedarme en el hotel."
         ],
         "respuestas": [
-            "Claro, puedo ayudarte a reservar. Por favor, indícame:",
-            "1. Tipo de habitación que deseas.",
-            "2. Fecha de entrada y salida.",
-            "3. Número de huéspedes.",
-            "Una vez con esa información, procederemos con tu reserva."
+          "Para realizar una reserva debes seleccionar el boton Menu y luego darle a la opción Reservar"
         ]
     },
     {
@@ -166,19 +191,12 @@
             "¿Cómo veo mi reserva?",
             "Quiero consultar mi reserva.",
             "¿Dónde puedo verificar mi estadía?",
-            "Necesito los detalles de mi reserva."
+            "Necesito los detalles de mi reserva.",
+            "detalles reserva"
         ],
         "respuestas": [
             "Para consultar tu reserva, necesito el número unico de reserva. Por favor, proporciónamelo para buscar los detalles."
         ]
-    },
-    {
-      "tag": "new-reserva",
-      "patrones":[], "respuestas":[]
-    },
-    {
-      "tag": "del-reserva",
-      "patrones":[], "respuestas":[]
     }
   ]
 }

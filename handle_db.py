@@ -4,7 +4,7 @@ conn = sqlite3.connect('soldorado.db')
 import sqlite3
 
 # Crear nueva reserva
-def db_new_reserva(usuario, fecha, dias):
+def db_new_reserva(usuario, fecha, dias, room, huespedes):
     conn = sqlite3.connect('soldorado.db')
     cursor = conn.cursor()
 
@@ -19,9 +19,9 @@ def db_new_reserva(usuario, fecha, dias):
 
     # Insertando datos a la BD
     cursor.execute("""
-        INSERT INTO reserva (reserva_usuario, reserva_num, reserva_fecha, reserva_dias)
-        VALUES (?, ?, ?, ?)
-    """, (usuario, num, fecha, dias))
+        INSERT INTO reserva (reserva_usuario, reserva_num, reserva_fecha, reserva_dias, reserva_room, reserva_huespedes)
+        VALUES (?, ?, ?, ?, ?, ?)
+    """, (usuario, num, fecha, dias, room, huespedes))
 
     conn.commit()
     conn.close()
@@ -32,18 +32,18 @@ def db_check_reserva(reserva_num):
     conn = sqlite3.connect('soldorado.db')
     cursor = conn.cursor()
     
-    # Query the reserva table for the given reserva_num
-    cursor.execute("SELECT reserva_num, reserva_fecha, reserva_dias FROM reserva WHERE reserva_num = ?", (reserva_num,))
+    # Query
+    cursor.execute("SELECT reserva_usuario, reserva_fecha, reserva_dias, reserva_huespedes, reserva_room FROM reserva WHERE reserva_usuario = ?", (reserva_num,))
 
-    # Fetch the result
+    # Fetching the results
     reserva = cursor.fetchone()
 
     # Check if the reservation exists
     if reserva:
         # Print the reservation details
-        return f"Numero de reserva: {reserva[0]}", f"Fecha de la reserva: {reserva[1]}", f"Dias reservados: {reserva[2]}"
+        return f"Usuario: {reserva[0]}", f"Fecha de la reserva: {reserva[1]}", f"Dias reservados: {reserva[2]}", f"Numero de huespedes: {reserva[3]}", f"Habitación {reserva[4]}"
     else:
-        return "No se encontro ninguna reserva con el numero ingresado.", "", ""
+        return "No se encontro ninguna reserva con el numero ingresado.", "", "", "", ""
     
     conn.close()
 
@@ -76,7 +76,7 @@ def check_db():
 
 
 # Ejemplo de uso. Insert a new reserva
-db_new_reserva("toto", '2024-11-21', 6)
+db_new_reserva("toto", '2024-11-21', 6, "tipo_2", 12)
 check_db()
 
 """

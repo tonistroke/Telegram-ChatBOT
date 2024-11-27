@@ -8,6 +8,8 @@ sql_script_reserva = """CREATE TABLE IF NOT EXISTS reserva (
     reserva_id INTEGER PRIMARY KEY AUTOINCREMENT,
     reserva_usuario TEXT,
     reserva_num INTEGER UNIQUE NOT NULL,
+    reserva_huespedes INTEGER,
+    reserva_room TEXT,
     reserva_fecha TEXT NOT NULL,
     reserva_dias INTEGER NOT NULL
 );

@@ -1,0 +1,184 @@
+{
+    "intents": [
+      {
+        "tag": "greeting",
+        "patrones": [
+          "Hola",
+          "¿Qué tal?",
+          "¿Qué hay de nuevo?",
+          "¿Como estas?",
+          "¡Hola bot!",
+          "Buenas noches",
+          "Buenas tardes",
+          "¡Buenos días!",
+          "¡Ey, amigo!"
+        ],
+        "respuestas": [
+          "¡Hola, usuario! ¿Qué necesitas hoy?",
+          "¡Hola! ¿En qué puedo ayudarte hoy?",
+          "¡Buenos días! Espero que tengas un día productivo.",
+          "¡Hola! Estoy aquí para lo que necesites.",
+          "Buenas, ¿cómo te puedo ayudar?",
+          "¡Hola! Estoy funcionando al 100%, ¿y tú?",
+          "Hey, ¿cómo estás?"
+        ]
+      },
+      {
+        "tag": "bot-estado",
+        "patrones": [
+          "¿Cómo va todo?",
+          "¿Cómo estás?",
+          "¿Qué tal te encuentras?",
+          "¿Cómo te va?",
+          "¿Cómo andas?",
+          "¿Qué tal todo?",
+          "¿Cómo te sientes hoy?"
+        ], 
+        "respuestas": [
+          "¡Hola! Nada nuevo por aquí, pero estoy listo para ayudarte.",
+          "¡Estoy genial! ¿En qué puedo ayudarte hoy?",
+          "Todo bien, gracias por preguntar. ¿Y tú, cómo estás?",
+          "¡Al 100%! ¿Qué tal tú?",
+          "¡Perfecto! Gracias por preguntar, ¿en qué puedo asistirte?",
+          "Estoy aquí para ayudarte, ¿cómo puedo ser útil?"
+        ]
+      },
+      {
+        "tag": "despido",
+        "patrones": [
+          "Adiós.",
+          "Nos vemos luego.",
+          "Hasta pronto.",
+          "¡Cuídate!",
+          "Hasta la próxima.",
+          "Gracias, eso es todo.",
+          "Chao, ¡que estés bien!",
+          "Me tengo que ir, ¡adiós!",
+          "Nos hablamos después.", 
+          "hasta luego.",
+          "Chao!"
+          ],
+        "respuestas": [
+          "¡Adiós! Que tengas un excelente día.",
+          "Hasta luego, estaré aquí si me necesitas.",
+          "¡Cuídate! Nos vemos pronto.",
+          "Hasta la próxima.",
+          "¡Hasta luego! Siempre es un gusto ayudarte.",
+          "Que te vaya muy bien, ¡nos vemos después!",
+          "¡Chao! Recuerda que estaré disponible cuando me necesites.",
+          "¡Saludos! Aquí estaré para cualquier consulta.",
+          "¡Hasta la próxima! Fue un placer asistirte."
+        ]
+      },
+      {
+        "tag": "gracias",
+        "patrones": [
+          "Gracias.",
+          "Muchas gracias.",
+          "Te agradezco mucho.",
+          "Mil gracias.",
+          "¡Gracias por tu ayuda!",
+          "Estoy muy agradecido.",
+          "Gracias, me fue de gran ayuda.",
+          "Agradezco tu apoyo.",
+          "¡Eres de gran ayuda, gracias!",
+          "¡Gracias por todo!"
+        ],
+        "respuestas": [
+          "¡De nada! Siempre estoy aquí para ayudarte.",
+          "No hay de qué, para eso estoy.",
+          "Me alegra haber sido útil, ¿necesitas algo más?",
+          "¡Con gusto! Avísame si hay algo más en lo que pueda ayudarte.",
+          "¡Es un placer ayudarte!"
+      ]
+      },
+      {
+        "tag": "usuario-estado-ok",
+        "patrones": [
+          "Estoy bien.",
+          "Me siento genial.",
+          "Todo va de maravilla.",
+          "Estoy muy feliz.",
+          "Hoy me siento excelente.",
+          "Todo está en orden.",
+          "Me siento tranquilo y contento.",
+          "Estoy teniendo un gran día.",
+          "Todo está saliendo como quiero.",
+          "¡Hoy estoy al 100%!"
+        ],
+        "respuestas": [
+          "¡Qué bueno escuchar eso! ¿En qué puedo ayudarte hoy?",
+          "Me alegra que te sientas bien, ¿hay algo que necesites?"
+        ]
+      },
+      {
+        "tag": "usuario-estado-not-ok",
+        "patrones": [
+          "No me siento bien.",
+          "Estoy mal.",
+          "Hoy no es mi día.",
+          "Me siento triste.",
+          "Estoy cansado.",
+          "No estoy en mi mejor momento.",
+          "Estoy pasando por un mal rato.",
+          "Me siento frustrado.",
+          "Hoy me siento decaído.",
+          "Estoy algo deprimido."
+        ],
+        "respuestas": [
+          "Lo siento, espero que las cosas mejoren pronto.",
+          "¡Ánimo! Seguro que pronto te sentirás mejor."
+        ]
+      },
+      {
+        "tag": "info-habitaciones",
+        "patrones": [
+            "¿Qué habitaciones tienen?",
+            "¿Cuáles son los tipos de habitaciones?",
+            "Quiero información de las habitaciones.",
+            "¿Qué incluye cada tipo de habitación?",
+            "¿Qué amenidades ofrecen?"
+        ],
+        "respuestas": [
+            "Tenemos tres tipos de habitaciones: Tipo 1: Acceso a bar., Tipo 2: Acceso a bar, restaurante con buffet habierto, karaoke y piscina pública. Tipo 3: Todo lo mostrado en Tipo 2, más una habitación enorme con piscina privada y cancha deportiva más lo mostrado en tipo 2. Por favor, indícame cuál te interesa para más detalles."
+        ]
+    },
+    {
+        "tag": "reservar-estadia",
+        "patrones": [
+            "Quiero reservar una habitación.",
+            "Necesito hacer una reserva.",
+            "¿Cómo puedo agendar una estadía?",
+            "Ayúdame a hacer una reserva.",
+            "Quiero quedarme en el hotel."
+        ],
+        "respuestas": [
+            "Claro, puedo ayudarte a reservar. Por favor, indícame:",
+            "1. Tipo de habitación que deseas.",
+            "2. Fecha de entrada y salida.",
+            "3. Número de huéspedes.",
+            "Una vez con esa información, procederemos con tu reserva."
+        ]
+    },
+    {
+        "tag": "consultar-reserva",
+        "patrones": [
+            "¿Cómo veo mi reserva?",
+            "Quiero consultar mi reserva.",
+            "¿Dónde puedo verificar mi estadía?",
+            "Necesito los detalles de mi reserva."
+        ],
+        "respuestas": [
+            "Para consultar tu reserva, necesito el número unico de reserva. Por favor, proporciónamelo para buscar los detalles."
+        ]
+    },
+    {
+      "tag": "new-reserva",
+      "patrones":[], "respuestas":[]
+    },
+    {
+      "tag": "del-reserva",
+      "patrones":[], "respuestas":[]
+    }
+  ]
+}

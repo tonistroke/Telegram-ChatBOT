@@ -76,7 +76,7 @@ def check_db():
 
 
 # Ejemplo de uso. Insert a new reserva
-db_new_reserva("toto", '2024-11-21', 6, "tipo_2", 12)
+db_new_reserva("tonio", '2024-11-21', 6, "tipo_1", 2)
 check_db()
 
 """

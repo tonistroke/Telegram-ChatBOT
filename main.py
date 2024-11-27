@@ -79,21 +79,28 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
         await update.message.reply_photo(photo=open(image_rest, 'rb'), caption=rest_text)
         await update.message.reply_photo(photo=open(image_pool, 'rb'), caption=pool_text)
     
-    """
+    
     if tag == "info-t2":
-        #"Tipo 2: 
-        # restaurante y buffet con las mejores comidas, 
 
-        # karaoke entre otros eventos."
+        image_buff = "images/buff.jpg"
+        image_kar = "images/kar.jpg"
+
+        buff_text = "Restaurante y buffet con las mejores comidas, "
+        kar_text = "karaoke entre otros eventos."
+
         await update.message.reply_photo(photo=open(image_buff, 'rb'), caption=buff_text)
         await update.message.reply_photo(photo=open(image_kar, 'rb'), caption=kar_text)
     
     if tag == "info-t3":
-        pass # "más una habitación enorme con piscina privada y cancha deportiva más lo mostrado en tipo 2."
-    """
-    if tag == "consultar-reserva":
-        print("llego aqui --1")
-    
+        image_indoor = "images/indoor.jpg"
+        image_indoor_pool = "images/indoor_pool.jpg"
+
+        indoor_pool_text= "Una habitación enorme con piscina privada"
+        indoor_pool = "canchas deportiva entre otras actividades."
+
+        await update.message.reply_photo(photo=open(image_indoor_pool, 'rb'), caption=indoor_pool_text)
+        await update.message.reply_photo(photo=open(image_indoor, 'rb'), caption=indoor_pool)
+
 # Quiz Nueva reserva handler 
 # _________________________________________________________________________________
 # Estados para la conversación
